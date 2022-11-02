@@ -1,0 +1,6 @@
+func init para crear la función
+.venv\Scripts\activate  para arrancar el entorno virtual
+No arranque la función con func start. Usa F5 desde visual studio code.
+
+En VS code hay que instalar además la extensión Azurite que simula el almacenamiento de Azure pero en local.
+Se arranca Azurite con F1 y buscar Azurite:Start

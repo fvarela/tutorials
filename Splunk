@@ -1,0 +1,28 @@
+SET TOKENS:
+  In an input use <change>
+  In a query use: 
+    <done>
+    <progress>
+
+Set token based on conditions:
+
+  Using IF or CASE
+  <change>
+    <eval token="form.panel">if($time_difference$<=86400,"compare","single")</eval> -> Using IF
+    <eval token="showPanelComparison">case($showPanel$=="Comparison","true")</eval> -> Using CASE
+  </change>
+  
+  Using CONDITION:
+  <progress>
+    <condition match="$master_token$==&quot;Data Entry&quot;">
+  </progress>
+
+Access VALUE and RESULTS on inputs:
+  <change>
+    <condition value="compare">
+      <set token="showPanelComparison">true</set>
+    </condition>
+  </change>
+  
+  Condition for empty selection:
+    <condition match="isnull($value$)"></condition>

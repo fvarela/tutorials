@@ -17,6 +17,9 @@ Set token based on conditions:
   <progress>
     <condition match="$master_token$==&quot;Data Entry&quot;">
   </progress>
+  
+  Using CONDITION on several conditions
+  <condition match="''job.resultCount' > 0 AND result.custom_r1p1_vi'==&quot;line&quot;">
 
 Access VALUE, RESULTS adn JOB on inputs:
   Access value:

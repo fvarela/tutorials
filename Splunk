@@ -3,6 +3,7 @@ SET TOKENS:
   In a query use: 
     <done>
     <progress>
+    <finalized> 
 
 Set token based on conditions:
 
@@ -17,12 +18,18 @@ Set token based on conditions:
     <condition match="$master_token$==&quot;Data Entry&quot;">
   </progress>
 
-Access VALUE and RESULTS on inputs:
-  <change>
-    <condition value="compare">
-      <set token="showPanelComparison">true</set>
-    </condition>
-  </change>
-  
-  Condition for empty selection:
-    <condition match="isnull($value$)"></condition>
+Access VALUE, RESULTS adn JOB on inputs:
+  Access value:
+    <change>
+      <condition value="compare">
+        <set token="showPanelComparison">true</set>
+      </condition>
+    </change>
+  Empty value:
+     <condition match="isnull($value$)"></condition>
+  Search with no results:
+     <condition match=" 'job.resultCount' != 0">
+ 
+Unset values from a form. Use both tokens below:
+  <unset token="selected_channel"></unset>
+  <unset token="form.selected_channel"></unset>

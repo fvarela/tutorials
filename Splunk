@@ -1,4 +1,8 @@
 SET TOKENS:
+  In the beggining of the form (just below the <label>):
+    <init>
+      <unset token="selected_channel"></unset>
+    </init>
   In an input use <change>
   In a query use: 
     <done>
